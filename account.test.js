@@ -10,15 +10,20 @@ describe("Account class", () => {
 
   it("deposit function only accepts positive intergers", () => {
     expect(() => account.deposit(-100)).toThrow(
-      "Please use a positive interger to deposit money"
+      "Please use a positive interger for money transacitons"
     );
     expect(() => account.deposit("loads of money")).toThrow(
-      "Please use a positive interger to deposit money"
+      "Please use a positive interger for money transacitons"
     );
   });
 
   it("deducts from the balance via a withdrawl method", () => {
     account.withdrawl(250);
     expect(account.balance).toEqual(250);
+  });
+
+  it("withdrawl function only accepts positive intergers", () => {
+    expect(() => account.withdrawl(-100)).toThrow();
+    expect(() => account.withdrawl("loads of money")).toThrow();
   });
 });
