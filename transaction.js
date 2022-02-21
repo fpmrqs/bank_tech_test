@@ -1,6 +1,8 @@
 class Transaction {
-  constructor(name) {
-    this.name = name;
+  constructor({ deposit = null, withdrawl = null, balance }) {
+    this.deposit = deposit;
+    this.withdrawl = withdrawl;
+    this.balance = balance;
     this.date = this.#set_transaction_date();
   }
 

@@ -1,16 +1,27 @@
+const Statement = require("./statement.js")
+const Transaction = require("./transaction.js")
+
 class Account {
-  constructor() {
+  constructor(statement = new Statement, transaction = Transaction) {
+    this.transaction = transaction
+    this.statement = statement
     this.balance = 0;
   }
 
   deposit(amount) {
-    this.#validateTransaction(amount)
+    this.#validateTransaction(amount);
     this.balance += amount;
+    this.statement.addTransaction(
+      new this.transaction({ deposit: amount, balance: this.balance })
+    )
   }
 
   withdrawl(amount) {
-    this.#validateTransaction(amount)
+    this.#validateTransaction(amount);
     this.balance -= amount;
+    this.statement.addTransaction(
+      new this.transaction({ withdrawl: amount, balance: this.balance })
+    )
   }
 
   #validateTransaction(amount) {
