@@ -17,7 +17,7 @@ describe("Account class", () => {
     );
   });
 
-  it("deducts from the balance via a withdrawl method", () => {
+  it("deducts from the balance via a withdrawl function", () => {
     account.withdrawl(250);
     expect(account.balance).toEqual(250);
   });
@@ -26,4 +26,5 @@ describe("Account class", () => {
     expect(() => account.withdrawl(-100)).toThrow();
     expect(() => account.withdrawl("loads of money")).toThrow();
   });
+
 });
