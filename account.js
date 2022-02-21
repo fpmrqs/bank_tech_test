@@ -8,12 +8,15 @@ class Account {
     this.balance += amount;
   }
 
+  withdrawl(amount) {
+    this.balance -= amount;
+  }
+
   #validateTransaction(amount) {
     if (typeof amount !== 'number' || amount < 0) {
       throw new Error("Please use a positive interger to deposit money");
     }
   }
-
 }
 
 module.exports = Account
