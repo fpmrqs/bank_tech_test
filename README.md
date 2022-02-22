@@ -30,22 +30,51 @@ npx eslint <file you're looking to lint>
 | deposit()     || addTransaction()  |
 | withdrawl()   || print()  |
 
-The Transaction class is responsible for storing datab about each transaction, including dates, nature of transaction, amount and current balance.
+
+* The Account class is responsible for taking the input from the user and handling the account balance
+* The Transaction class only has one private function but is responsible for storing the data from each transaction including date, nature of transaction, amount and current balance. 
+* The Statement class handles the printing of the bank statement
 
 ## How to run
-
+Run node to start interacting with the program. You can interact via the following commands:
 ```
-const Account = require("./account.js");
-const Statement = require("./statement");
-const Transaction = require("./transaction");
+# Load our Account class and create a new instance of it
+> const Account = require("./account.js");
+> const account = new Account;
 
-const account = new Account;
+# Make deposits and whitdrawls
+> account.deposit(100)
+> account.withdrawl(24)
 
-account.deposit(500)
+# Print statement
+> account.statement.print()
+```
+Example of the program running on the terminal:
+```
+> node
+Welcome to Node.js v17.4.0.
+Type ".help" for more information.
+> const Account = require("./account.js");
+undefined
+> 
+> const account = new Account;
+undefined
+> 
+> account.deposit(500)
+undefined
+> 
+> account.deposit(250)
+undefined
+> 
+> account.withdrawl(45)
+undefined
+> 
+> account.statement.print()
+date || credit || debit || balance
+22/02/2022 || 500 ||  || 500
+22/02/2022 || 250 ||  || 750
+22/02/2022 ||  || 45 || 705
 
-account.deposit(250)
-
-account.withdrawl(45)
-
-account.statement.print()
+undefined
+> 
 ```
