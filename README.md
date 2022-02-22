@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/fpmrqs/bank_tech_test/branch/main/graph/badge.svg?token=ORFIJOETGF)](https://codecov.io/gh/fpmrqs/bank_tech_test)
 # bank_tech_test
 
 * This is a tech test from week 9 of Makers Academy
