@@ -1,4 +1,7 @@
 [![codecov](https://codecov.io/gh/fpmrqs/bank_tech_test/branch/main/graph/badge.svg?token=ORFIJOETGF)](https://codecov.io/gh/fpmrqs/bank_tech_test)
+
+[![fpmrqs](https://circleci.com/gh/fpmrqs/bank_tech_test.svg?style=svg)](https://app.circleci.com/pipelines/github/fpmrqs/bank_tech_test?filter=all)
+
 # bank_tech_test
 
 * This is a tech test from week 9 of Makers Academy
