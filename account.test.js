@@ -17,6 +17,12 @@ describe("Account class", () => {
     );
   });
 
+  it("can only withdrawl if there is oney enough balance", () => {
+    expect(() => account.withdrawl(1000)).toThrow(
+      "Not enough funds in the account!"
+    );
+  });
+
   it("deducts from the balance via a withdrawl function", () => {
     account.withdrawl(250);
     expect(account.balance).toEqual(250);

@@ -17,7 +17,7 @@ class Account {
   }
 
   withdrawl(amount) {
-    this.#validateTransaction(amount);
+    this.#validateWithdrawl(amount);
     this.balance -= amount;
     this.statement.addTransaction(
       new this.transaction({ withdrawl: amount, balance: this.balance })
@@ -28,6 +28,13 @@ class Account {
     if (typeof amount !== "number" || amount < 0) {
       throw new Error("Please use a positive interger for money transactions");
     }
+  }
+
+  #validateWithdrawl(amount) {
+    if (amount > this.balance) {
+      throw new Error("Not enough funds in the account!");
+    }
+    this.#validateTransaction(amount);
   }
 }
 
