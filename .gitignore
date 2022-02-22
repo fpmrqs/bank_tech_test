@@ -1,2 +1,5 @@
 # Ignore module folders
 node_modules
+
+# Ignore Jest coverage
+coverage

@@ -10,10 +10,10 @@ describe("Account class", () => {
 
   it("deposit function only accepts positive intergers", () => {
     expect(() => account.deposit(-100)).toThrow(
-      "Please use a positive interger for money transacitons"
+      "Please use a positive interger for money transactions"
     );
     expect(() => account.deposit("loads of money")).toThrow(
-      "Please use a positive interger for money transacitons"
+      "Please use a positive interger for money transactions"
     );
   });
 

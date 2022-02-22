@@ -28,3 +28,21 @@ date || credit || debit || balance
 14/01/2023 || || 500.00 || 2500.00
 13/01/2023 || 2000.00 || || 3000.00
 10/01/2023 || 1000.00 || || 1000.00
+
+# How to run
+
+```
+const Account = require("./account.js");
+const Statement = require("./statement");
+const Transaction = require("./transaction");
+
+const account = new Account;
+
+account.deposit(500)
+
+account.deposit(250)
+
+account.withdrawl(45)
+
+account.statement.print()
+```

@@ -26,7 +26,7 @@ class Account {
 
   #validateTransaction(amount) {
     if (typeof amount !== "number" || amount < 0) {
-      throw new Error("Please use a positive interger for money transacitons");
+      throw new Error("Please use a positive interger for money transactions");
     }
   }
 }

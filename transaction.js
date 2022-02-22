@@ -1,5 +1,5 @@
 class Transaction {
-  constructor({ deposit = null, withdrawl = null, balance }) {
+  constructor({ deposit = "", withdrawl = "", balance }) {
     this.deposit = deposit;
     this.withdrawl = withdrawl;
     this.balance = balance;

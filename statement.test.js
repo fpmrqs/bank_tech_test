@@ -1,15 +1,17 @@
 const Statement = require("./statement.js");
 
 describe("Statement class", () => {
-  it("prints the correct table format", () => {
+  it("prints the statement table header", () => {
     const statement = new Statement();
+    console.log = jest.fn();
+    statement.print()
 
-    expect(statement.print()).toEqual(
+    expect(console.log).toHaveBeenCalledWith(
       "date || credit || debit || balance\n"
     );
   });
 
-  it("prints deposit transaction with date", () => {
+  it("prints header + transactions with date", () => {
     const statement = new Statement();
     statement.addTransaction({
       deposit: 100,
@@ -18,8 +20,11 @@ describe("Statement class", () => {
       date: "17/07/2014",
     });
 
-    expect(statement.print()).toEqual(
-      "date || credit || debit || balance\n" + "17/07/2014 || 100 ||  || 100"
+    console.log = jest.fn();
+    statement.print()
+
+    expect(console.log).toHaveBeenCalledWith(
+      "date || credit || debit || balance\n" + "17/07/2014 || 100 ||  || 100\n"
     );
   });
 });
