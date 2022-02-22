@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run test
-        post-steps:
+      - post-steps:
             - codecov/upload
         
   
