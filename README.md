@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/fpmrqs/bank_tech_test/branch/main/graph/badge.svg?token=ORFIJOETGF)](https://codecov.io/gh/fpmrqs/bank_tech_test)  [![fpmrqs](https://circleci.com/gh/fpmrqs/bank_tech_test.svg?style=svg)](https://app.circleci.com/pipelines/github/fpmrqs/bank_tech_test?filter=all)
+[![codecov](https://codecov.io/gh/fpmrqs/bank_tech_test/branch/main/graph/badge.svg?token=ORFIJOETGF)](https://codecov.io/gh/fpmrqs/bank_tech_test)      [![fpmrqs](https://circleci.com/gh/fpmrqs/bank_tech_test.svg?style=svg)](https://app.circleci.com/pipelines/github/fpmrqs/bank_tech_test?filter=all)
 
 # bank_tech_test
 
