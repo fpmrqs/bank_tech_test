@@ -18,6 +18,12 @@
   },
   "homepage": "https://github.com/fpmrqs/bank_tech_test#readme",
   "dependencies": {
+    "eslint-config-prettier": "^8.4.0",
     "jest": "^27.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
   }
 }
