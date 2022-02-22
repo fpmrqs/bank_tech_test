@@ -9,8 +9,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run test
-      - post-steps:
-            - codecov/upload:
-            file: {{ coverage/coverage-final.json }}
+      - codecov/upload:
+          file: /coverage/coverage-final.json 
         
   
