@@ -3,33 +3,36 @@
 * This is a tech test from week 9 of Makers Academy
 * For the original test instructions, please refer to [this](https://github.com/makersacademy/course/blob/main/individual_challenges/bank_tech_test.md)
 
-Given a client makes a deposit of 1000 on 10-01-2023
-And a deposit of 2000 on 13-01-2023
-And a withdrawal of 500 on 14-01-2023
+### How to install  
+Clone this repo to your machine and install dependencies via the command bellow:  
+```
+npm install
+```
 
-Deposit
-Withdrawl
-Print Bank Statement
-Date
+### Running Tests (jest)
+The current test coverage is 100%. To run the unit tests, use the command below:  
+```
+jest
+```
 
+### Running Linter (ESlint)  
+ES Lint was used for linting, together with prettier. To tun the linter, use the command below: 
+```
+npx eslint <file you're looking to lint>
+```
 
-| Account class                  |
-| Contains          | Actions
-| this.balance      | Deposit
-| this.transaction  | Withdrawl
+### Approach  
+* My approach was to find the best balance in between having clear separation of concerns but also readable code.
+* The program is divided into three classes, as per the tables below
 
-Transaction class
-this.date
+| Account       | Transaction   | Statement     |
+| ------------- | ------------- | ------------- |
+| deposit()     || addTransaction()  |
+| withdrawl()   || print()  |
 
-BankStatement class
-this.history
+The Transaction class is responsible for storing datab about each transaction, including dates, nature of transaction, amount and current balance.
 
-date || credit || debit || balance
-14/01/2023 || || 500.00 || 2500.00
-13/01/2023 || 2000.00 || || 3000.00
-10/01/2023 || 1000.00 || || 1000.00
-
-# How to run
+## How to run
 
 ```
 const Account = require("./account.js");
